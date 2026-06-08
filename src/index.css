@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-serif-secondary: "Lora", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-cream: var(--bg-primary);
+  --color-brand-paper: var(--bg-secondary);
+  --color-brand-ink: var(--text-primary);
+  --color-brand-stone: var(--text-secondary);
+  --color-brand-clay: var(--color-clay);
+  --color-brand-olive: var(--color-olive);
+  --color-brand-gold: var(--color-gold);
+}
+
+@layer base {
+  :root {
+    --bg-primary: #FAF9F6; /* Carta avorio */
+    --bg-secondary: #F2F0EB; /* Tela grezza */
+    --text-primary: #1A1A1A; /* Inchiostro */
+    --text-secondary: #4E4D48; /* Warm dark stone - WCAG AA compliant */
+    --color-clay: #8E5240; /* Rich contrast clay - WCAG AA compliant */
+    --color-olive: #4E523F; /* Deep organic olive - WCAG AA compliant */
+    --color-gold: #96722E; /* Accessible gold - WCAG AA compliant */
+    --selection-bg: #EAE3D5;
+  }
+
+  .dark {
+    --bg-primary: #121211;
+    --bg-secondary: #1A1A19;
+    --text-primary: #FAF9F6;
+    --text-secondary: #9E9E96;
+    --color-clay: #B49286;
+    --color-olive: #5F634F;
+    --color-gold: #C5A059;
+    --selection-bg: #323230;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-ink font-sans antialiased transition-colors duration-500;
+  }
+  
+  ::selection {
+    background-color: var(--color-brand-selection);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.markdown-body {
+  @apply font-sans leading-relaxed;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-serif mt-8 mb-4;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
