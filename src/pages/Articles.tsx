@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Clock } from 'lucide-react';
 import { ARTICLES } from '../constants';
 import { SectionHeading } from '../components/SectionHeading';
 import { PageTransition } from '../components/PageTransition';
@@ -23,7 +23,18 @@ export const Articles = () => {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h4 className="font-serif text-brand-stone text-sm">{article.source}</h4>
-                    <p className="text-xs text-brand-stone/60">{article.date}</p>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <p className="text-xs text-brand-stone/60">{article.date}</p>
+                      {article.readingTime && (
+                        <>
+                          <span className="w-1 h-1 rounded-full bg-brand-stone/30" />
+                          <span className="flex items-center gap-1 text-[10px] uppercase tracking-wider font-bold text-brand-clay">
+                            <Clock size={10} className="stroke-[2.5]" />
+                            {article.readingTime}
+                          </span>
+                        </>
+                      )}
+                    </div>
                   </div>
                   <ExternalLink size={16} className="text-brand-stone group-hover:text-brand-ink transition-colors" />
                 </div>

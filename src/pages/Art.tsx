@@ -6,6 +6,7 @@ import { ArtCard } from '../components/ArtCard';
 import { SectionHeading } from '../components/SectionHeading';
 import { PageTransition } from '../components/PageTransition';
 import { SocialShare } from '../components/SocialShare';
+import { ExhibitionsSection } from '../components/ExhibitionsSection';
 
 export const Art = () => {
   const [selectedPiece, setSelectedPiece] = useState<typeof ART_PIECES[0] | null>(null);
@@ -39,6 +40,9 @@ export const Art = () => {
               </div>
             ))}
           </div>
+
+          {/* Exhibition of past & upcoming events */}
+          <ExhibitionsSection />
         </div>
 
         {/* LIGHTBOX MODAL */}

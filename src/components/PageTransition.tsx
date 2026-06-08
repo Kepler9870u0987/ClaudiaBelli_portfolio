@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
 import { motion } from 'motion/react';
 
-export const PageTransition = ({ children }: { children: React.ReactNode }) => {
+export const PageTransition = ({ children }: { children: ReactNode }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}

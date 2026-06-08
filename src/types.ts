@@ -43,4 +43,15 @@ export interface Article {
   date: string;
   url: string;
   excerpt: string;
+  readingTime?: string;
+}
+
+export interface Exhibition {
+  id: string;
+  title: string;
+  date: string;
+  location: string;
+  description: string;
+  status: 'upcoming' | 'past';
+  image: string;
 }

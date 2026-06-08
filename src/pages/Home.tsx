@@ -15,26 +15,67 @@ export const Home = () => {
         {/* HERO SECTION */}
         <section id="home" className="min-h-screen py-24 md:py-32 flex items-center relative px-12 overflow-hidden border-b border-brand-ink/5">
           <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-between min-h-[75vh] gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <h1 className="text-[90px] lg:text-[160px] leading-[0.8] tracking-[-0.04em] font-serif italic mb-10 text-brand-ink text-balance">
-                Claudia<br/>
-                <span className="not-italic md:ml-32 tracking-tighter text-brand-clay underline decoration-brand-olive/20 underline-offset-8">Belli</span>
-              </h1>
-              
-              <div className="flex flex-col md:flex-row md:ml-32 gap-12 items-baseline">
-                <p className="max-w-md text-xl leading-relaxed text-brand-ink/80 font-serif-secondary italic">
-                  "L'arte è il respiro dell'anima, la scrittura è il suo battito." — Pittrice e scrittrice in dialogo costante tra tela e inchiostro.
-                </p>
-                <div className="flex gap-4">
-                  <div className="w-12 h-[1px] bg-brand-clay/30 self-center"></div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest opacity-40">Parma / Sant'Ilario d'Enza</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                className="lg:col-span-7"
+              >
+                <h1 className="text-[75px] sm:text-[90px] lg:text-[120px] xl:text-[140px] leading-[0.8] tracking-[-0.04em] font-serif italic mb-10 text-brand-ink text-balance">
+                  Claudia<br/>
+                  <span className="not-italic md:ml-24 xl:ml-32 tracking-tighter text-brand-clay underline decoration-brand-olive/20 underline-offset-8">Belli</span>
+                </h1>
+                
+                <div className="flex flex-col md:flex-row md:ml-24 xl:ml-32 gap-8 items-baseline">
+                  <p className="max-w-md text-lg sm:text-xl leading-relaxed text-brand-ink/80 font-serif-secondary italic">
+                    "L'arte è il respiro dell'anima, la scrittura è il suo battito." — Pittrice e scrittrice in dialogo costante tra tela e inchiostro.
+                  </p>
+                  <div className="flex gap-4 shrink-0">
+                    <div className="w-8 h-[1px] bg-brand-clay/30 self-center"></div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest opacity-40">Parma / Sant'Ilario d'Enza</span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Spazio Immagine Profilo Elegante */}
+              <motion.div 
+                id="hero-profile-image-container"
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="lg:col-span-5 flex justify-center lg:justify-end relative"
+              >
+                <div className="relative w-72 sm:w-80 md:w-96 lg:w-full max-w-[340px] aspect-[3/4] p-3 bg-brand-secondary/45 dark:bg-brand-paper shadow-2xl rounded-2xl border border-brand-ink/5 rotate-2 hover:rotate-0 transition-transform duration-500 ease-out z-10">
+                  {/* Sigla d'Artista sul ritratto */}
+                  <div className="absolute top-6 right-6 z-20 mix-blend-difference text-white/50 font-serif-secondary text-xs italic tracking-widest pointer-events-none select-none">
+                    C.B.
+                  </div>
+                  
+                  {/* Cornice decorativa d'estrazione */}
+                  <div className="absolute inset-0 border border-brand-clay/30 rounded-2xl pointer-events-none -translate-x-3 translate-y-3 -z-10" />
+                  
+                  {/* Contenitore Immagine */}
+                  <div className="w-full h-full overflow-hidden rounded-xl bg-brand-cream relative">
+                    <div className="absolute inset-0 bg-brand-clay/10 mix-blend-color z-10 pointer-events-none" />
+                    <img 
+                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" 
+                      alt="Ritratto di Claudia Belli"
+                      className="w-full h-full object-cover grayscale opacity-95 hover:grayscale-0 hover:opacity-100 transition-all duration-700 ease-out"
+                    />
+                  </div>
+                  
+                  {/* Etichetta editoriale descrittiva */}
+                  <div className="absolute bottom-6 left-6 right-6 bg-brand-paper/95 dark:bg-brand-paper/95 backdrop-blur-sm p-3.5 rounded-lg border border-brand-ink/5 shadow-md flex items-center justify-between">
+                    <div className="space-y-0.5">
+                      <span className="block text-[8px] font-bold uppercase tracking-widest text-brand-stone/60">L'Autrice</span>
+                      <span className="block text-xs font-serif font-semibold text-brand-ink">Claudia Belli</span>
+                    </div>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-brand-clay">Scrittrice & Pittrice</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
             <div className="flex flex-col lg:flex-row justify-between lg:items-end mt-12 pt-12 border-t border-brand-ink/10 gap-8">
               <div className="hidden lg:block space-y-4 text-brand-ink">

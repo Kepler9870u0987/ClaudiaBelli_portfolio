@@ -13,10 +13,12 @@ import {
   Menu,
   X,
   Sun,
-  Moon
+  Moon,
+  Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../lib/utils';
+import { SearchModal } from './SearchModal';
 
 export const Navbar = ({ theme, toggleTheme }: { 
   theme: 'light' | 'dark',
@@ -24,6 +26,7 @@ export const Navbar = ({ theme, toggleTheme }: {
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -66,7 +69,7 @@ export const Navbar = ({ theme, toggleTheme }: {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-8 mr-4 border-r border-brand-ink/10 pr-8">
             {navItems.filter(item => item.path !== '/').map((item) => (
               <NavLink
@@ -84,31 +87,52 @@ export const Navbar = ({ theme, toggleTheme }: {
             ))}
           </div>
 
-          <button 
-            onClick={toggleTheme}
-            className="p-2 transition-colors hover:bg-brand-ink/5 rounded-full text-brand-ink"
-            title={theme === 'dark' ? 'Attiva Tema Chiaro' : 'Attiva Tema Scuro'}
-          >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 transition-colors hover:bg-brand-ink/5 rounded-full text-brand-ink cursor-pointer flex items-center justify-center"
+              title="Cerca nel sito"
+            >
+              <Search size={18} />
+            </button>
+
+            <button 
+              onClick={toggleTheme}
+              className="p-2 transition-colors hover:bg-brand-ink/5 rounded-full text-brand-ink cursor-pointer flex items-center justify-center"
+              title={theme === 'dark' ? 'Attiva Tema Chiaro' : 'Attiva Tema Scuro'}
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Actions */}
         <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={() => setIsSearchOpen(true)}
+            className="p-2 text-brand-ink cursor-pointer"
+            title="Cerca nel sito"
+          >
+            <Search size={20} />
+          </button>
           <button 
             onClick={toggleTheme}
-            className="p-2 text-brand-ink"
+            className="p-2 text-brand-ink cursor-pointer"
+            title={theme === 'dark' ? 'Attiva Tema Chiaro' : 'Attiva Tema Scuro'}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button 
-            className="p-2 text-brand-ink"
+            className="p-2 text-brand-ink cursor-pointer"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
+
+      {/* Global Search Dialog Overlay */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Mobile Menu */}
       <AnimatePresence>

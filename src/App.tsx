@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { BackToTop } from './components/BackToTop';
+import { Breadcrumbs } from './components/Breadcrumbs';
 import { Home } from './pages/Home';
 import { Biography } from './pages/Biography';
 import { Books } from './pages/Books';
@@ -37,11 +39,13 @@ export default function App() {
   const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
 
   return (
-    <div className="min-h-screen selection:bg-brand-clay selection:text-white transition-colors duration-500 bg-brand-cream">
+    <div className="min-h-screen selection:bg-brand-clay selection:text-white transition-colors duration-500 bg-brand-cream relative">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Breadcrumbs />
 
       <main>
         <AnimatePresence mode="wait">
+          {/* @ts-ignore */}
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/chi-sono" element={<Biography />} />
@@ -57,6 +61,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 }

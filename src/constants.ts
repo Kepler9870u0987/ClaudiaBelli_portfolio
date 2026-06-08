@@ -1,4 +1,4 @@
-import { Book, ArtPiece, Poem, Event, Article } from './types';
+import { Book, ArtPiece, Poem, Event, Article, Exhibition } from './types';
 
 export const BOOKS: Book[] = [
   {
@@ -99,7 +99,8 @@ export const ARTICLES: Article[] = [
     source: 'Gazzettino Santilariese',
     date: 'Rubrica Periodica',
     url: '#',
-    excerpt: 'Una rubrica dedicata alla scoperta della poesia contemporanea, dove le parole diventano ponti tra mondi ed emozioni profonde.'
+    excerpt: 'Una rubrica dedicata alla scoperta della poesia contemporanea, dove le parole diventano ponti tra mondi ed emozioni profonde.',
+    readingTime: '4 min lettura'
   },
   {
     id: 'art2',
@@ -107,7 +108,8 @@ export const ARTICLES: Article[] = [
     source: 'Gazzettino Santilariese',
     date: 'Rubrica Periodica',
     url: '#',
-    excerpt: 'Un viaggio critico e appassionato tra le pieghe dell\'arte moderna, con un focus speciale sulla forza creativa femminile.'
+    excerpt: 'Un viaggio critico e appassionato tra le pieghe dell\'arte moderna, con un focus speciale sulla forza creativa femminile.',
+    readingTime: '5 min lettura'
   },
   {
     id: 'art3',
@@ -115,6 +117,55 @@ export const ARTICLES: Article[] = [
     source: 'Gazzettino Santilariese',
     date: 'Rubrica Mensile',
     url: '#',
-    excerpt: 'Consigli di lettura curati da Claudia Belli, da grande lettrice, per chi cerca storie che lasciano un segno indelebile.'
+    excerpt: 'Consigli di lettura curati da Claudia Belli, da grande lettrice, per chi cerca storie che lasciano un segno indelebile.',
+    readingTime: '3 min lettura'
+  }
+];
+
+export const EXHIBITIONS: Exhibition[] = [
+  {
+    id: 'ex1',
+    title: 'Riflessi di Silenzio',
+    date: '15 Settembre - 5 Ottobre 2026',
+    location: 'Galleria Farini, Bologna',
+    description: 'Mostra personale che mette in dialogo le tele pittoriche astratte dell\'artista con i versi della silloge "Dal cuore in poi". Un percorso itinerante tra parola tradotta in pigmento e tele meditative.',
+    status: 'upcoming',
+    image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'ex2',
+    title: 'Magica Voce: Sinergie dell\'Anima',
+    date: '12 - 24 Dicembre 2026',
+    location: 'Centro Culturale Mavarta, Parma',
+    description: 'Esposizione sensoriale multidisciplinare. Le ultime opere visive di Claudia Belli fanno da scenografia a performance dal vivo di canto lirico, scultura e letture poetiche d\'atmosfera.',
+    status: 'upcoming',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'ex3',
+    title: 'Frammenti di Luce interiore',
+    date: 'Ottobre 2025',
+    location: 'Galerie d\'Art de L\'Europe, Parigi',
+    description: 'Esposizione internazionale acclamata dalla critica. Al centro della mostra una selezione di opere astratte a tecnica mista ispirate alla forza della resilienza e alla sublimazione del dolore.',
+    status: 'past',
+    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'ex4',
+    title: 'Artisti in Rete: Confini e Libertà',
+    date: 'Maggio 2024',
+    location: 'Palazzo del Governatore, Parma',
+    description: 'Progetto espositivo sinergico nato dai laboratori artistico-pittorici guidati da Claudia Belli in collaborazione con la Rete Carcere di Parma, promuovendo il riscatto sociale attraverso l\'attività creativa.',
+    status: 'past',
+    image: 'https://images.unsplash.com/photo-1533158307587-828f0a9501a7?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'ex5',
+    title: 'Estetiche Contemporanee: Luce Segreta',
+    date: 'Novembre 2023',
+    location: 'Reial Cercle Artístic, Barcellona',
+    description: 'Esposizione collettiva di pittura contemporanea e grafica d\'autore europea, in cui l\'opera acrilica "Luce Segreta" di Claudia Belli ha guadagnato la medaglia critica e l\'ammirazione del pubblico.',
+    status: 'past',
+    image: 'https://images.unsplash.com/photo-1501472312651-726afd116ff1?q=80&w=800&auto=format&fit=crop'
   }
 ];

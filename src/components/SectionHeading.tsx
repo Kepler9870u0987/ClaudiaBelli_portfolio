@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
 import { motion } from 'motion/react';
 
-export const SectionHeading = ({ children, id }: { children: React.ReactNode, id?: string }) => (
+export const SectionHeading = ({ children, id }: { children: ReactNode, id?: string }) => (
   <motion.div 
     id={id}
     initial={{ opacity: 0, y: 20 }}
