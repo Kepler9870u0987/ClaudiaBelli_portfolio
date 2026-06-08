@@ -13,11 +13,11 @@ export const Art = () => {
 
   return (
     <PageTransition>
-      <section id="opere-arte" className="py-40 px-12 bg-brand-paper dark:bg-brand-paper/50 min-h-screen">
+      <section id="opere-arte" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 bg-brand-paper dark:bg-brand-paper/50 min-h-screen">
         <div className="max-w-7xl mx-auto">
           <SectionHeading>Galleria d'Arte</SectionHeading>
           
-          <div className="mb-12 p-6 border border-brand-ink/10 bg-brand-cream/50 rounded-2xl flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <div className="mb-12 p-5 md:p-6 border border-brand-ink/10 bg-brand-cream/50 rounded-2xl flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <div className="w-10 h-10 rounded-full bg-brand-clay/10 flex items-center justify-center shrink-0 text-brand-clay font-bold text-lg italic serif">
               !
             </div>

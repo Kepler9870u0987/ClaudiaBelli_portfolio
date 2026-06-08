@@ -54,8 +54,8 @@ export const Navbar = ({ theme, toggleTheme }: {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-12 py-8",
-      isScrolled ? "bg-brand-cream/95 backdrop-blur-md py-4 border-b border-brand-ink/5" : "bg-transparent"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 py-6 md:py-8",
+      isScrolled ? "bg-brand-cream/95 backdrop-blur-md py-3 md:py-4 border-b border-brand-ink/5" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-start">
         <div className="flex flex-col gap-1">

@@ -8,10 +8,10 @@ export const Curation = () => {
 
   return (
     <PageTransition>
-      <section id="curatela" className="py-40 px-12 min-h-screen flex items-center">
+      <section id="curatela" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 min-h-screen flex items-center">
         <div className="max-w-4xl mx-auto text-center w-full">
           <SectionHeading>Curatela Editoriale</SectionHeading>
-          <div className="bg-brand-olive text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden text-left">
+          <div className="bg-brand-olive text-white p-6 sm:p-12 rounded-2xl md:rounded-3xl shadow-2xl relative overflow-hidden text-left">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl" />
             <h3 className="text-3xl font-serif mb-6 relative z-10">Collana "Libera-Mente Scrivere"</h3>
             <p className="text-xl opacity-90 mb-8 relative z-10 leading-relaxed font-serif italic">

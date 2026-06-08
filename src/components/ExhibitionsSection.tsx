@@ -174,7 +174,7 @@ export const ExhibitionsSection = () => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-brand-paper rounded-3xl overflow-hidden shadow-2xl border border-brand-ink/10 max-w-2xl w-full relative z-10 flex flex-col md:flex-row"
+              className="bg-brand-paper rounded-3xl overflow-hidden shadow-2xl border border-brand-ink/10 max-w-2xl w-full relative z-10 flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-y-visible"
             >
               <button
                 onClick={() => setSelectedExhibition(null)}

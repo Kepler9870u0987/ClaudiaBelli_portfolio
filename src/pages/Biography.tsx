@@ -6,14 +6,14 @@ export const Biography = () => {
   return (
     <PageTransition>
       <ReadingProgressBar />
-      <section id="chi-sono" className="py-40 px-12 bg-[#EFEDE9] dark:bg-brand-paper relative overflow-hidden min-h-screen">
+      <section id="chi-sono" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 bg-[#EFEDE9] dark:bg-brand-paper relative overflow-hidden min-h-screen">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-24 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="w-full lg:w-1/2"
+              className="w-full lg:w-1/2 max-w-md mx-auto lg:max-w-none"
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream">
                  <div className="absolute inset-0 bg-[#E0DCCF] border border-black/5 transform rotate-2"></div>
@@ -31,10 +31,10 @@ export const Biography = () => {
               viewport={{ once: true }}
               className="w-full lg:w-1/2 text-brand-ink"
             >
-              <div className="space-y-12">
+              <div className="space-y-8 md:space-y-12">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40 mb-4 block">Identity</span>
-                  <h2 className="text-6xl font-serif italic mb-8">La duplice anima creativa</h2>
+                  <h2 className="text-4xl md:text-6xl font-serif italic mb-8">La duplice anima creativa</h2>
                   <div className="prose prose-lg text-brand-ink/80 font-serif-secondary italic leading-relaxed space-y-6">
                     <p>
                       Pittrice e scrittrice residente a Sant'Ilario d'Enza, Claudia Belli vive in un dialogo costante tra tela e inchiostro. 

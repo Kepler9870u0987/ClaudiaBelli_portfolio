@@ -39,7 +39,11 @@
   }
 
   body {
-    @apply bg-brand-cream text-brand-ink font-sans antialiased transition-colors duration-500;
+    @apply bg-brand-cream text-brand-ink font-sans antialiased transition-colors duration-500 overflow-x-hidden;
+  }
+  
+  html {
+    @apply overflow-x-hidden;
   }
   
   ::selection {

@@ -8,7 +8,7 @@ export const Articles = () => {
   return (
     <PageTransition>
       <ReadingProgressBar />
-      <section id="rubriche" className="py-40 px-12 bg-brand-paper/30 min-h-screen">
+      <section id="rubriche" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 bg-brand-paper/30 min-h-screen">
         <div className="max-w-5xl mx-auto">
           <SectionHeading>Pensieri e Riflessioni</SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -18,7 +18,7 @@ export const Articles = () => {
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block bg-brand-cream p-8 rounded-2xl shadow-sm border border-brand-ink/5 hover:shadow-md transition-all border-l-4 border-l-brand-ink"
+                className="group block bg-brand-cream p-6 sm:p-8 rounded-2xl shadow-sm border border-brand-ink/5 hover:shadow-md transition-all border-l-4 border-l-brand-ink"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>

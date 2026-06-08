@@ -7,14 +7,14 @@ import { PageTransition } from '../components/PageTransition';
 export const Events = () => {
   return (
     <PageTransition>
-      <section id="eventi" className="py-40 px-12 bg-brand-stone/5 min-h-screen">
+      <section id="eventi" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 bg-brand-stone/5 min-h-screen">
         <div className="max-w-5xl mx-auto">
           <SectionHeading>Percorsi e Traguardi</SectionHeading>
           <div className="space-y-8">
             {EVENTS.map(event => (
               <motion.div 
                 key={event.id}
-                className="flex gap-8 items-start bg-brand-cream dark:bg-brand-paper p-8 rounded-2xl shadow-sm border border-brand-ink/5"
+                className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start bg-brand-cream dark:bg-brand-paper p-6 sm:p-8 rounded-2xl shadow-sm border border-brand-ink/5"
               >
                 <div className="bg-brand-paper dark:bg-brand-ink/10 p-4 rounded-xl shrink-0">
                   <Award className="text-brand-ink" size={32} />

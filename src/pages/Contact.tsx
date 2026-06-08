@@ -4,13 +4,13 @@ import { PageTransition } from '../components/PageTransition';
 export const Contact = () => {
   return (
     <PageTransition>
-      <section id="contatti" className="py-40 px-12 bg-brand-cream text-brand-ink min-h-screen flex items-center">
+      <section id="contatti" className="pt-44 md:pt-60 pb-24 px-6 md:px-12 bg-brand-cream text-brand-ink min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-col lg:flex-row gap-24">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
             <div className="lg:w-1/2 space-y-12">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40 mb-4 block">Dialogue</span>
-                <h2 className="text-7xl font-serif italic mb-8">Iniziamo un nuovo progetto</h2>
+                <h2 className="text-4xl md:text-7xl font-serif italic mb-8">Iniziamo un nuovo progetto</h2>
               </div>
               
               <p className="text-xl text-brand-ink/70 font-serif italic max-w-md leading-relaxed">
@@ -30,7 +30,7 @@ export const Contact = () => {
               </div>
             </div>
             
-            <div className="lg:w-1/2 bg-brand-paper p-12 relative">
+            <div className="lg:w-1/2 bg-brand-paper p-6 sm:p-12 relative">
               <div className="absolute inset-0 border border-black/5 pointer-events-none"></div>
               <form className="space-y-10 relative z-10" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

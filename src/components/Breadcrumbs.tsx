@@ -30,11 +30,11 @@ export const Breadcrumbs = () => {
       initial={{ opacity: 0, y: -5 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-28 md:top-32 left-0 right-0 z-40 px-12 max-w-7xl mx-auto w-full flex items-center select-none pointer-events-none"
+      className="absolute top-28 md:top-32 left-0 right-0 z-40 px-6 md:px-12 max-w-7xl mx-auto w-full flex items-center select-none pointer-events-none"
     >
       <nav 
         aria-label="Breadcrumb" 
-        className="flex items-center gap-2 bg-[#F2F0EB]/60 dark:bg-black/15 backdrop-blur-sm px-4 py-2 rounded-full border border-brand-ink/5 text-[10px] sm:text-[11px] font-sans font-bold uppercase tracking-widest pointer-events-auto"
+        className="flex flex-wrap items-center gap-x-2 gap-y-1.5 bg-[#F2F0EB]/60 dark:bg-black/15 backdrop-blur-sm px-4 py-2 rounded-2xl sm:rounded-full border border-brand-ink/5 text-[9px] sm:text-[11px] font-sans font-bold uppercase tracking-widest pointer-events-auto"
       >
         <Link
           to="/"
